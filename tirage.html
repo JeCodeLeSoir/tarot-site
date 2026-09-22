@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#14243a">
+  <meta name="description" content="Retournez jusqu’à dix cartes parmi les 78 cartes de tarot mélangées, puis découvrez leur description.">
+  <title>Tirage parmi 78 cartes — Atlas du Tarot</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2314243a'/%3E%3Cpath d='M32 8 36 27 55 32 36 37 32 56 28 37 9 32 28 27Z' fill='%23e4b862'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header"><div class="shell header-inner"><a class="brand" href="index.html"><span class="brand-star" aria-hidden="true">✧</span>Atlas du Tarot</a><nav class="main-nav" aria-label="Navigation principale"><a href="index.html">Toutes les cartes</a><a href="tirage.html" aria-current="page">Tirage aléatoire</a><a href="cartes.html">Descriptions</a></nav></div></header>
+  <main class="shell draw-main">
+    <div class="page-head"><p class="eyebrow">Tirage de dix cartes</p><h1>Choisissez parmi 78 cartes</h1><p>Les 78 cartes sont mélangées, face cachée et disposées en éventail. Retournez-en jusqu’à dix. Cliquez à nouveau sur une carte révélée pour la remettre dans le jeu.</p></div>
+    <div class="draw-toolbar"><span class="draw-count" id="drawCount">0 / 10 cartes choisies</span><div class="draw-actions"><button type="button" class="secondary" id="newDraw">Mélanger les 78 cartes</button><button type="button" class="primary" id="readDraw" disabled>Voir la description de mes 10 cartes</button></div></div>
+    <div class="draw-fans" id="drawGrid" aria-label="Les 78 cartes face cachée"></div>
+    <p class="draw-status" id="drawStatus" role="status" aria-live="polite"></p>
+  </main>
+  <footer class="site-footer"><div class="shell footer-inner"><span>Un tirage est une piste de réflexion, à interpréter selon votre situation.</span><a href="https://commons.wikimedia.org/wiki/Category:Rider-Waite-Smith_tarot_deck_(TaionWC)" target="_blank" rel="noopener noreferrer">Illustrations : Pamela Colman Smith · Wikimedia Commons ↗</a></div></footer>
+  <script src="cards.js"></script><script src="tirage.js?v=3"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#14243a">
+  <meta name="description" content="Les illustrations, symboles et significations des 78 cartes du tarot Rider–Waite–Smith.">
+  <title>Cartes et descriptions — Atlas du Tarot</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2314243a'/%3E%3Cpath d='M32 8 36 27 55 32 36 37 32 56 28 37 9 32 28 27Z' fill='%23e4b862'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">{"imports":{"https://cdn.jsdelivr.net/npm/onnxruntime-common/+esm":"https://cdn.jsdelivr.net/npm/onnxruntime-common@1.31.0-dev.20260911-2a43ec07e/+esm"}}</script>
+</head>
+<body>
+  <header class="site-header"><div class="shell header-inner"><a class="brand" href="index.html"><span class="brand-star" aria-hidden="true">✧</span>Atlas du Tarot</a><nav class="main-nav" aria-label="Navigation principale"><a href="index.html">Toutes les cartes</a><a href="tirage.html">Tirage aléatoire</a><a href="cartes.html" aria-current="page">Descriptions</a></nav></div></header>
+  <main class="shell catalog-main">
+    <div class="page-head"><p class="eyebrow">Guide illustré</p><h1 id="pageTitle">Les cartes et leur description</h1><p id="pageIntro">Explorez les 78 cartes du tarot Rider–Waite–Smith. Chaque fiche explique ce que montre l’image et propose une signification simple.</p></div>
+    <div class="selected-note" id="selectedNote" hidden><span id="selectionIntro">Voici les cartes que vous avez retrouvées.</span> <a href="cartes.html">Voir les 78 descriptions</a> · <a href="index.html" id="retryLink">Retour à toutes les cartes</a></div>
+    <section class="ai-panel" id="aiPanel" aria-labelledby="aiTitle" hidden>
+      <div class="ai-panel-head"><div><p class="eyebrow">Modèle Hugging Face dans le navigateur</p><h2 id="aiTitle">Comprendre mes 10 cartes</h2></div><span class="local-badge">Analyse sur votre appareil</span></div>
+      <p class="ai-explainer">Le modèle multilingue LFM2.5 350M relie les significations des dix cartes pour proposer une lecture en français. Au premier usage, le navigateur télécharge environ 255 Mo avec WebGPU ou 510 Mo sur le processeur depuis Hugging Face. Une connexion est nécessaire pour ce premier chargement ; la génération se fait sur votre appareil.</p>
+      <form id="aiForm"><button class="primary" id="aiSubmit" type="submit">Interpréter mon tirage</button></form>
+      <p class="ai-status" id="aiStatus" role="status" aria-live="polite">Prêt à interpréter les dix cartes.</p>
+      <div class="ai-result" id="aiResult" aria-live="polite" hidden></div>
+      <details class="ai-prompt"><summary>Voir le prompt de lecture</summary><pre id="aiPromptPreview"></pre></details>
+    </section>
+    <div class="toolbar"><div class="filters" role="group" aria-label="Filtrer les cartes"><button type="button" class="filter" data-family="all" aria-pressed="true">Toutes</button><button type="button" class="filter" data-family="major" aria-pressed="false">Majeurs</button><button type="button" class="filter" data-family="wands" aria-pressed="false">Bâtons</button><button type="button" class="filter" data-family="cups" aria-pressed="false">Coupes</button><button type="button" class="filter" data-family="swords" aria-pressed="false">Épées</button><button type="button" class="filter" data-family="pents" aria-pressed="false">Deniers</button></div><input id="search" class="search" type="search" aria-label="Rechercher une carte" placeholder="Rechercher une carte…"></div>
+    <div class="section-line"><h2 id="sectionHeading">Toutes les cartes</h2><span id="resultCount">78 cartes</span></div>
+    <div class="catalog-list" id="catalogList"></div>
+  </main>
+  <footer class="site-footer"><div class="shell footer-inner"><span>Les significations sont des pistes d’interprétation à lire selon le contexte.</span><a href="https://commons.wikimedia.org/wiki/Category:Rider-Waite-Smith_tarot_deck_(TaionWC)" target="_blank" rel="noopener noreferrer">Illustrations : Pamela Colman Smith · Wikimedia Commons ↗</a></div></footer>
+  <script src="cards.js"></script><script src="catalogue.js?v=2"></script><script src="tarot-ai.js?v=18"></script>
+</body>
+</html>
